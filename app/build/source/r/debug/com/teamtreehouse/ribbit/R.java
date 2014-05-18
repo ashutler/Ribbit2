@@ -14,8 +14,9 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
-        public static final int background_purple=0x7f050000;
-        public static final int light_gray=0x7f050001;
+        public static final int apptheme_color=0x7f050000;
+        public static final int background_purple=0x7f050001;
+        public static final int light_gray=0x7f050002;
     }
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f060000;
@@ -27,23 +28,35 @@ public final class R {
         public static final int message_list_item_vertical_margin=0x7f060006;
     }
     public static final class drawable {
-        public static final int avatar_empty=0x7f020000;
-        public static final int avatar_selected=0x7f020001;
-        public static final int background=0x7f020002;
-        public static final int background_fill=0x7f020003;
-        public static final int button_divider=0x7f020004;
-        public static final int ic_action_camera=0x7f020005;
-        public static final int ic_action_picture=0x7f020006;
-        public static final int ic_action_play_over_video=0x7f020007;
-        public static final int ic_action_send_now=0x7f020008;
-        public static final int ic_launcher=0x7f020009;
-        public static final int ic_menu_camera=0x7f02000a;
-        public static final int ic_menu_overflow=0x7f02000b;
-        public static final int ic_menu_send=0x7f02000c;
-        public static final int ic_picture=0x7f02000d;
-        public static final int ic_tab_friends=0x7f02000e;
-        public static final int ic_tab_inbox=0x7f02000f;
-        public static final int ic_video=0x7f020010;
+        public static final int apptheme_btn_default_disabled_focused_holo_light=0x7f020000;
+        public static final int apptheme_btn_default_disabled_holo_light=0x7f020001;
+        public static final int apptheme_btn_default_focused_holo_light=0x7f020002;
+        public static final int apptheme_btn_default_holo_light=0x7f020003;
+        public static final int apptheme_btn_default_normal_holo_light=0x7f020004;
+        public static final int apptheme_btn_default_pressed_holo_light=0x7f020005;
+        public static final int apptheme_edit_text_holo_light=0x7f020006;
+        public static final int apptheme_textfield_activated_holo_light=0x7f020007;
+        public static final int apptheme_textfield_default_holo_light=0x7f020008;
+        public static final int apptheme_textfield_disabled_focused_holo_light=0x7f020009;
+        public static final int apptheme_textfield_disabled_holo_light=0x7f02000a;
+        public static final int apptheme_textfield_focused_holo_light=0x7f02000b;
+        public static final int avatar_empty=0x7f02000c;
+        public static final int avatar_selected=0x7f02000d;
+        public static final int background=0x7f02000e;
+        public static final int background_fill=0x7f02000f;
+        public static final int button_divider=0x7f020010;
+        public static final int ic_action_camera=0x7f020011;
+        public static final int ic_action_picture=0x7f020012;
+        public static final int ic_action_play_over_video=0x7f020013;
+        public static final int ic_action_send_now=0x7f020014;
+        public static final int ic_launcher=0x7f020015;
+        public static final int ic_menu_camera=0x7f020016;
+        public static final int ic_menu_overflow=0x7f020017;
+        public static final int ic_menu_send=0x7f020018;
+        public static final int ic_picture=0x7f020019;
+        public static final int ic_tab_friends=0x7f02001a;
+        public static final int ic_tab_inbox=0x7f02001b;
+        public static final int ic_video=0x7f02001c;
     }
     public static final class id {
         public static final int action_camera=0x7f0a0011;
@@ -126,17 +139,13 @@ public final class R {
         public static final int video_size_limit_warning=0x7f070028;
     }
     public static final class style {
-        /** 
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
- API 11 theme customizations can go here. 
+        /**  API 11 theme customizations can go here. 
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f080000;
-        /**  All customizations that are NOT specific to a particular API-level can go here. 
-         */
-        public static final int AppTheme=0x7f080001;
+        public static final int AppBaseTheme=0x7f080004;
+        public static final int AppTheme=0x7f080000;
+        public static final int ButtonAppTheme=0x7f080001;
+        public static final int ImageButtonAppTheme=0x7f080002;
+        public static final int _AppTheme=0x7f080003;
     }
 }
