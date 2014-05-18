@@ -3,7 +3,6 @@ package com.teamtreehouse.ribbit;
 import android.app.Application;
 
 import com.parse.Parse;
-import com.parse.ParseObject;
 
 public class RibbitApplication extends Application {
 	
@@ -11,7 +10,7 @@ public class RibbitApplication extends Application {
 	public void onCreate() { 
 		super.onCreate();
 	    Parse.initialize(this, 
-	    	"YOUR APPLICATION ID GOES HERE", 
-	    	"YOUR CLIENT KEY GOES HERE");
+	    	"So08UwtShKeyfByco1lA7KIDC8VSFJSnw7gzF3De",
+	    	"KBDsj0hMa9q5snYyzOL03Vwn3nBZdVfFTsh7nQto");
 	}
 }
