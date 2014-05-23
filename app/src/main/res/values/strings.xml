@@ -51,5 +51,6 @@
     <string name="background_image_desc">Ribbit frog background image</string>
     <string name="subtitle">A Treehouse project</string>
     <string name="content_divider">Content divider</string>
+    <string name="message_icon_description">Message Icon</string>
 
 </resources>
