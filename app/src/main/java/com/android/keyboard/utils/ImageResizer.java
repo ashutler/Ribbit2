@@ -1,6 +1,4 @@
-package com.teamtreehouse.ribbit.utils;
-
-import java.io.ByteArrayOutputStream;
+package com.android.keyboard.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

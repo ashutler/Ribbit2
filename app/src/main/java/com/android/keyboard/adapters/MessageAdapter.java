@@ -1,4 +1,4 @@
-package com.teamtreehouse.ribbit.adapters;
+package com.android.keyboard.adapters;
 
 import android.content.Context;
 import android.text.format.DateUtils;
@@ -9,9 +9,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.keyboard.R;
+import com.android.keyboard.utils.ParseConstants;
 import com.parse.ParseObject;
-import com.teamtreehouse.ribbit.R;
-import com.teamtreehouse.ribbit.utils.ParseConstants;
 
 import java.util.Date;
 import java.util.List;
@@ -36,7 +36,8 @@ public class MessageAdapter extends ArrayAdapter<ParseObject> {
 			holder = new ViewHolder();
 			holder.iconImageView = (ImageView)convertView.findViewById(R.id.messageIcon);
             holder.nameLabel = (TextView)convertView.findViewById(R.id.senderLabel);
-            holder.timeLabel = (TextView)convertView.findViewById(R.id.timeLabel);
+			holder.timeLabel = (TextView)convertView.findViewById(R.id.timeLabel);
+			holder.textMessage = (TextView)convertView.findViewById(R.id.textMessage);
 			convertView.setTag(holder);
 		}
 		else {
@@ -53,8 +54,10 @@ public class MessageAdapter extends ArrayAdapter<ParseObject> {
 
 		if (message.getString(ParseConstants.KEY_FILE_TYPE).equals(ParseConstants.TYPE_IMAGE)) {
 			holder.iconImageView.setImageResource(R.drawable.ic_picture);
-		}
-		else {
+		} else if (message.getString(ParseConstants.KEY_FILE_TYPE).equals(ParseConstants.TYPE_TEXT)) {
+			holder.iconImageView.setImageResource(R.drawable.ic_picture);
+			holder.textMessage.setText(message.getString(ParseConstants.KEY_MESSAGE));
+		} else {
 			holder.iconImageView.setImageResource(R.drawable.ic_video);
 		}
 		holder.nameLabel.setText(message.getString(ParseConstants.KEY_SENDER_NAME));
@@ -66,7 +69,8 @@ public class MessageAdapter extends ArrayAdapter<ParseObject> {
 	private static class ViewHolder {
 		ImageView iconImageView;
         TextView nameLabel;
-        TextView timeLabel;
+		TextView timeLabel;
+		TextView textMessage;
 	}
 	
 	public void refill(List<ParseObject> messages) {

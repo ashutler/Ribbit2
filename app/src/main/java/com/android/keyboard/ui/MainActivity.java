@@ -1,4 +1,4 @@
-package com.teamtreehouse.ribbit.ui;
+package com.android.keyboard.ui;
 
 import android.app.ActionBar;
 import android.app.AlertDialog;
@@ -17,11 +17,11 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.widget.Toast;
 
+import com.android.keyboard.R;
+import com.android.keyboard.adapters.SectionsPagerAdapter;
+import com.android.keyboard.utils.ParseConstants;
 import com.parse.ParseAnalytics;
 import com.parse.ParseUser;
-import com.teamtreehouse.ribbit.R;
-import com.teamtreehouse.ribbit.adapters.SectionsPagerAdapter;
-import com.teamtreehouse.ribbit.utils.ParseConstants;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -306,14 +306,18 @@ public class MainActivity extends FragmentActivity implements
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		int itemId = item.getItemId();
-		
+		Intent intent;
 		switch(itemId) {
 			case R.id.action_logout:
 				ParseUser.logOut();
 				navigateToLogin();
 				break;
+			case R.id.action_text:
+				intent = new Intent(this, TextActivity.class);
+				startActivity(intent);
+				break;
 			case R.id.action_edit_friends:
-				Intent intent = new Intent(this, EditFriendsActivity.class);
+				intent = new Intent(this, EditFriendsActivity.class);
 				startActivity(intent);
 				break;
 			case R.id.action_camera:

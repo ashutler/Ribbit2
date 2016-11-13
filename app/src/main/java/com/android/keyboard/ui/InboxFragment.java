@@ -1,4 +1,4 @@
-package com.teamtreehouse.ribbit.ui;
+package com.android.keyboard.ui;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,15 +11,15 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.android.keyboard.R;
+import com.android.keyboard.adapters.MessageAdapter;
+import com.android.keyboard.utils.ParseConstants;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
-import com.teamtreehouse.ribbit.R;
-import com.teamtreehouse.ribbit.adapters.MessageAdapter;
-import com.teamtreehouse.ribbit.utils.ParseConstants;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -97,19 +97,23 @@ public class InboxFragment extends ListFragment {
 		ParseObject message = mMessages.get(position);
 		String messageType = message.getString(ParseConstants.KEY_FILE_TYPE);
 		ParseFile file = message.getParseFile(ParseConstants.KEY_FILE);
-		Uri fileUri = Uri.parse(file.getUrl());
-
+		Uri fileUri = null;
+		if (file != null && file.isDataAvailable()) {
+			fileUri = Uri.parse(file.getUrl());
+		}
 		if (messageType.equals(ParseConstants.TYPE_IMAGE)) {
 			// view the image
 			Intent intent = new Intent(getActivity(), ViewImageActivity.class);
 			intent.setData(fileUri);
 			startActivity(intent);
 		}
-		else {
+		else if (messageType.equals(ParseConstants.TYPE_VIDEO)){
 			// view the video
 			Intent intent = new Intent(Intent.ACTION_VIEW, fileUri);
 			intent.setDataAndType(fileUri, "video/*");
 			startActivity(intent);
+		} else {
+			// Just a text message, do nothing
 		}
 
 		// Delete it!
@@ -129,7 +133,9 @@ public class InboxFragment extends ListFragment {
 			message.removeAll(ParseConstants.KEY_RECIPIENT_IDS, idsToRemove);
 			message.saveInBackground();
 		}
-	}
+        retrieveMessages();
+
+    }
     protected SwipeRefreshLayout.OnRefreshListener mOnRefreshListener =
             new SwipeRefreshLayout.OnRefreshListener() {
 

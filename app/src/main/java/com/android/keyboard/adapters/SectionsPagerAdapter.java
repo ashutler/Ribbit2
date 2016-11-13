@@ -1,13 +1,13 @@
-package com.teamtreehouse.ribbit.adapters;
+package com.android.keyboard.adapters;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.teamtreehouse.ribbit.R;
-import com.teamtreehouse.ribbit.ui.FriendsFragment;
-import com.teamtreehouse.ribbit.ui.InboxFragment;
+import com.android.keyboard.R;
+import com.android.keyboard.ui.FriendsFragment;
+import com.android.keyboard.ui.InboxFragment;
 
 import java.util.Locale;
 

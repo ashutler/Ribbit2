@@ -1,4 +1,4 @@
-package com.teamtreehouse.ribbit.ui;
+package com.android.keyboard.ui;
 
 import android.app.AlertDialog;
 import android.app.ListActivity;
@@ -11,14 +11,14 @@ import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.android.keyboard.R;
+import com.android.keyboard.utils.ParseConstants;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
 import com.parse.ParseRelation;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
-import com.teamtreehouse.ribbit.utils.ParseConstants;
-import com.teamtreehouse.ribbit.R;
 
 import java.util.List;
 

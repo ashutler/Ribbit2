@@ -1,4 +1,4 @@
-package com.teamtreehouse.ribbit.utils;
+package com.android.keyboard.utils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;

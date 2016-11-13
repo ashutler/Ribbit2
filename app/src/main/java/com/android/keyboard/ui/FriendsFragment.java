@@ -1,6 +1,4 @@
-package com.teamtreehouse.ribbit.ui;
-
-import java.util.List;
+package com.android.keyboard.ui;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
@@ -11,13 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
+import com.android.keyboard.R;
+import com.android.keyboard.utils.ParseConstants;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
 import com.parse.ParseRelation;
 import com.parse.ParseUser;
-import com.teamtreehouse.ribbit.utils.ParseConstants;
-import com.teamtreehouse.ribbit.R;
+
+import java.util.List;
 
 public class FriendsFragment extends ListFragment {
 	

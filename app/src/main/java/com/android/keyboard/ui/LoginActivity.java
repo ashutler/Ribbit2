@@ -1,4 +1,4 @@
-package com.teamtreehouse.ribbit.ui;
+package com.android.keyboard.ui;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -10,10 +10,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.android.keyboard.R;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
-import com.teamtreehouse.ribbit.R;
 
 public class LoginActivity extends Activity {
 
